@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet"
+        integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js"
+        integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class=" d-flex flex">
+        <div class="col-lg-4">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Images/img1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/img2.jpg" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <header role="banner">
+                <nav role="navigation" id="mainNav"
+                    class="navbar navbar-light bg-white navbar-expand-md pt-2 border-bottom pb-0 mb-2 pt-1"
+                    aria-label="Main navigation">
+                    <div class="container-fluid">
+                        <a href="/">
+                            <img id="imgw" src="https://orangecodingacademy.com/assets/boosted/dist/img/white.png"
+                                class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage"
+                                height="70" loading="lazy">
+                        </a>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#orange-navbar-collapse" aria-controls="orange-navbar-collapse"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse justify-content-end collapse" id="orange-navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="/help" target="_blank">Help </a></li>
+                                <li class="nav-item"><a class="nav-link" href="/terms" target="_blank"> Terms &amp;
+                                        Conditions</a></li>
+                            </ul>
+                            <ul class="navbar-nav">
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="d-flex align-items-center flex-column myForm">
+                <div class="form-group col-lg-6 col-md-7">
+                    <h1>Create an account</h1>
+                </div>
+                <div class="mb-4 form-group col-lg-6 col-md-7 ">
+                    <label for="email" class="is-required">Email address<span class="sr-only"> (required)</span></label>
+                    <div class="input-group ">
+                        <input name="email" type="text" class="form-control email  " id="email" value="">
+                    </div>
+                    <small>eg: username@domain.com </small>
+                    <strong id="email_error" style="color:red;display: none;"> Enter a valid email</strong>
+                </div>
+                <div class="mb-4 form-group col-lg-6 col-md-7 ">
+                    <label for="mobile" class="is-required">Mobile<span class="sr-only"> (required)</span></label>
+                    <div class="input-group ">
+                        <input name="mobile" type="number" class="form-control mobile  " id="mobile" value="">
+                    </div>
+                    <strong id="mobile_error" style="color: red;"> </strong><br>
+                    <small>eg: 077********</small>
+
+                </div>
+                <div class="mb-1 form-group col-lg-6 col-md-7" style="position: relative;">
+                    <label for="validationServer02" class="is-required">Create Password<span class="sr-only">
+                            (required)</span></label>
+                    <div class="input-group ">
+                        <input name="password" type="password" class="form-control password col-11 pr-0  " id="password"
+                            value="">
+                        <div class="d-flex align-items-center " onclick="showPass()">
+                            <small class=" btn btn-light border-left-0" aria-hidden="true"> show </small>
+                        </div>
+                    </div>
+                    <small>The Password should be between 6-8 characters. </small> <br>
+                    <div class="font-size-7 mb-3" >
+                       <span id="pass_error" style="display: none; color: red;"> the password should be (6-8 characters,1 uppercase, 1 number).
+                    
+                    </span></div>
+                </div>
+                <div class="form-group col-lg-6 col-md-7 mt-4">
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input " id="chAgree" name="chAgree" type="checkbox">
+                        <label class="custom-control-label " for="chAgree">I agree to the <a href="/terms"
+                                target="_blank">terms &amp;
+                                conditions</a> Orange. <span class="mandatory-txt">*</span></label>
+                                <strong style="display: none; color: red;" id="agree">Agree or i will kill you </strong>
+                    </div>
+                </div>
+                <div class="mb-4 form-group col-lg-6 col-md-7 ">
+                    <div class="form-group custom-control custom-checkbox col-sm-12 ">
+                        <input name="is_newsletter" type="checkbox" class="custom-control-input" id="is_newsletter"
+                            checked>
+                        <label class="ch-orange" for="is_newsletter">
+                            Receive Coding Academy Newsletter. </label>
+                    </div>
+                </div>
+                <div class="mb-4 form-group col-lg-6 col-md-7">
+                    <button class=" btn btn-primary  btn-lg btn-block" id="submit" type="submit">Sign Up</button>
+                </div>
+
+                <div class="mb-4 form-group col-lg-6 col-md-7">
+                    <a  style="text-decoration: none"> <input type="button"
+                            class="btn btn-secondary  btn-lg btn-block" value="Already have an account?login">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
